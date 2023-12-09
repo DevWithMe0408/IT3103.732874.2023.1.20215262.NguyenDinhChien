@@ -8,20 +8,25 @@ public class DigitalVideoDisc {
     private float cost;
     private int id;
     private static int nbDigitalVideoDiscs = 0;
+
     // 7. Create accessors and mutators for the class DigitalVideoDisc
     //create setters and getters for private attributes
     public String getTitle() {
         return title;
     }
+
     public String getCategory() {
         return category;
     }
+
     public String getDirector() {
         return director;
     }
+
     public int getLength() {
         return length;
     }
+
     public float getCost() {
         return cost;
     }
@@ -54,6 +59,7 @@ public class DigitalVideoDisc {
         nbDigitalVideoDiscs++;
         this.id = nbDigitalVideoDiscs;
     }
+
     //	Create a DVD object by category, title and cost
     public DigitalVideoDisc(String title, String category, float cost) {
         super();
@@ -63,6 +69,7 @@ public class DigitalVideoDisc {
         nbDigitalVideoDiscs++;
         this.id = nbDigitalVideoDiscs;
     }
+
     //	Create a DVD object by director, category, title and cost
     public DigitalVideoDisc(String title, String category, String director, float cost) {
         super();
@@ -73,6 +80,7 @@ public class DigitalVideoDisc {
         nbDigitalVideoDiscs++;
         this.id = nbDigitalVideoDiscs;
     }
+
     //	Create a DVD object by all attributes: title, category, director, length and cost
     public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
         super();
@@ -84,6 +92,26 @@ public class DigitalVideoDisc {
         nbDigitalVideoDiscs++;
         this.id = nbDigitalVideoDiscs;
     }
+
+    public String toString() {
+        return (String.format("%-20s  %-20s  %-20s  %-20d  %-20.2f \n", getTitle(), getCategory(), getDirector(), getLength(), getCost()));
+    }
+
+    public boolean isMatch(String title) {
+        String[] tmp = title.split(" ", 0);
+
+        for (String x : tmp) {
+            // convert all to LowerCase, and compare each word
+            if ((getTitle().toLowerCase()).contains(x.toLowerCase())) return true;
+        }
+
+        return false;
+    }
+
+    public boolean isMatch(int id) {
+        return this.id == id;
+    }
+
 
 }
 
