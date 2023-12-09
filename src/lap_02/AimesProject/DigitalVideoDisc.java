@@ -11,8 +11,6 @@ public class DigitalVideoDisc {
     public String getTitle() {
         return title;
     }
-
-
     public String getCategory() {
         return category;
     }
@@ -26,6 +24,25 @@ public class DigitalVideoDisc {
         return cost;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setDirector(String director) {
+        this.director = director;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public void setCost(float cost) {
+        this.cost = cost;
+    }
 
     // 8. Create Constructor method
     //	Create a DVD object by title
