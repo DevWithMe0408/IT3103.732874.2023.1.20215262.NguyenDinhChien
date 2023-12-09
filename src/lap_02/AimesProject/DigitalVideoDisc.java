@@ -6,6 +6,8 @@ public class DigitalVideoDisc {
     private String director;
     private int length;
     private float cost;
+    private int id;
+    private static int nbDigitalVideoDiscs = 0;
     // 7. Create accessors and mutators for the class DigitalVideoDisc
     //create setters and getters for private attributes
     public String getTitle() {
@@ -49,6 +51,8 @@ public class DigitalVideoDisc {
     public DigitalVideoDisc(String title) {
         super();
         this.title = title;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
     //	Create a DVD object by category, title and cost
     public DigitalVideoDisc(String title, String category, float cost) {
@@ -56,6 +60,8 @@ public class DigitalVideoDisc {
         this.title = title;
         this.category = category;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
     //	Create a DVD object by director, category, title and cost
     public DigitalVideoDisc(String title, String category, String director, float cost) {
@@ -64,6 +70,8 @@ public class DigitalVideoDisc {
         this.category = category;
         this.director = director;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
     //	Create a DVD object by all attributes: title, category, director, length and cost
     public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
@@ -73,6 +81,8 @@ public class DigitalVideoDisc {
         this.director = director;
         this.length = length;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
 }
