@@ -16,6 +16,49 @@ public class Cart {
         System.out.println("The disc has been added");
     }
 
+    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) { // Thêm một mảng DVD
+        if (this.qtyOrdered == MAX_NUMBERS_ORDERED) {
+            System.out.println("The order is full.");
+
+            return;
+        } else {
+            this.itemsOrdered = dvdList; // Truyền mảng vào
+            System.out.println("Disc array added.");
+        }
+
+    }
+//    	public void addDigitalVideoDisc(DigitalVideoDisc ...dvdList)  { // nhận một danh sách các đối tượng DVD
+//		if(this.qtyOrdered == MAX_NUMBERS_ORDERED){
+//			System.out.println("The order is full.");
+//			return;
+//		}
+//		else
+//		{
+//			this.itemsOrdered = dvdList; // Thêm danh sách đối tượng vào
+//			System.out.println("Disc array added.");
+//		}
+//
+//	}
+
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) { // Thêm với hai tham số khác
+        if (this.qtyOrdered >= MAX_NUMBERS_ORDERED) { // Check
+            System.out.println("The order is full.");
+            return;
+        } else {
+            itemsOrdered[qtyOrdered] = dvd1;
+            qtyOrdered += 1;
+            if (this.qtyOrdered == MAX_NUMBERS_ORDERED) {
+                System.out.println("The order is full.");
+                return;
+            } else {
+                itemsOrdered[qtyOrdered] = dvd2;
+                qtyOrdered += 1;
+                System.out.println("The items added.");
+            }
+        }
+
+    }
+
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         if (this.qtyOrdered == 0) { // Kiểm tra số lượng DVD hiện tại
             System.out.println("The list is empty.");
