@@ -1,0 +1,1 @@
+No, Java does not allow you to create two constructors with the same parameter list. In Java, constructor overloading is based on the number and types of parameters, not just the parameter names.
