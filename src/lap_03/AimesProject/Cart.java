@@ -1,4 +1,4 @@
-package lap_02.AimesProject;
+package lap_03.AimesProject;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
